@@ -1,3 +1,35 @@
+function videoPlay(id){
+    const urlSecreta='https://secret.com'+id
+    console.log('se esta reproduciendo desde'+urlSecreta)
+}
+
+function videoStop(id){
+    const urlSecreta='https://secret.com'+id
+    console.log('se esta Pausando desde'+urlSecreta)
+}
+
+export class PlatziClass
+{
+    constructor({
+        name,videoID,
+    }){
+
+        this.name=name;
+        this.videoID=videoID;
+    }
+
+    reproucir()
+    {
+        videoPlay(this.videoID)
+    }
+    pausar()
+    {
+        videoStop(this.videoID)
+    }
+}
+
+
+
 class Course
 {
     constructor({name,classes=[]})
@@ -16,7 +48,6 @@ class Course
         if(newName==='Curso malo')
         {
             console.error('Web.. no');
-
         }
         else{
 
